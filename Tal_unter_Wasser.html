@@ -1,0 +1,994 @@
+<!DOCTYPE html>//Bleibt gleich
+
+// 
+
+// 1. Neue Seite erstellen
+// 2. Hotspots erstellen
+// 3. Css (Style) erstellen
+
+<html>//Bleibt gleich
+
+    <head>//Bleibt gleich
+
+        <title>Panorama</title> // Bleibt gleich
+
+        <meta charset="utf-8">// Bleibt gleich
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">// Bleibt gleich
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>// Bleibt gleich
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>// Bleibt gleich
+
+        <script src="https://vjs.zencdn.net/7.1.0/video.js"></script>// Bleibt gleich
+
+        <link href="https://vjs.zencdn.net/7.19.1/video-js.css" rel="stylesheet" />// Bleibt gleich
+
+        <script src="https://pannellum.org/js/videojs-pannellum-plugin.js"></script>// Bleibt gleich
+
+        <style>
+            
+            html{ 
+                height: 100%;
+            }
+            body{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                position: fixed;
+                cursor: default;
+            }
+            
+
+            .Skipbutton {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88846/raw/media-88846-raw.png?");
+                background-size: contain;
+            }            
+            
+            .Hauptmenuebutton {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/83139/raw/media-83139-raw.png?");
+                background-size: contain;
+            } 
+            
+            .Gefahrenkartebutton {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/83124/raw/media-83124-raw.png?");
+                background-size: contain;
+            }
+            .GefahrenkarteInhalt {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88893/raw/media-88893-raw.mp4?");
+                background-size: contain;
+            }
+
+            .Logo-Wuppertal {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/89493/raw/media-89493-raw.png?");
+                background-size: contain;
+            }
+            .Logo-Wuppertal {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/89493/raw/media-89493-raw.png?");
+                background-size: contain;
+            }
+            .Quizbutton {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/89501/raw/media-89501-raw.png?");
+                background-size: contain;
+            }
+            .Standortbutton {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/89498/raw/media-89498-raw.png?");
+                background-size: contain;
+            }
+            .Begruessungsbutton {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/89499/raw/media-89499-raw.png?");
+                background-size: contain;
+            }
+            .Begruessung {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88781/raw/media-88781-raw.png?");
+                background-size: contain;
+            }
+            .Topografiebutton {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/89497/raw/media-89497-raw.png?");
+                background-size: contain;
+            }
+            .TopografieInhalt {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88783/raw/media-88783-raw.png?");
+                background-size: contain;
+            }
+            .TopografieAudio {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88784/raw/media-88784-raw.wav?");
+                background-size: contain;
+            }
+            .Hochwasserwarnungbutton {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/89500/raw/media-89500-raw.png?");
+                background-size: contain;
+            }
+            .Infobutton {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/83134/raw/media-83134-raw.png?");
+                background-size: contain;
+            }
+
+            .Infos-Icons {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/91406/raw/media-91406-raw.png?");
+                background-size: contain;
+            }            
+            
+            .InfosHochwasserprojekt {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88777/raw/media-88777-raw.png?");
+                background-size: contain;
+            }
+            .InfosHochwasserprojektAudio {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/91406/raw/media-91406-raw.png?");
+                background-size: contain;
+            }            
+            
+
+            .Gebaeudebutton {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/89506/raw/media-89506-raw.png?");
+                background-size: contain;
+            }
+            .GebaeudeInhalt {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88788/raw/media-88788-raw.png?");
+                background-size: contain;
+            }
+            .GebaeudeAudio {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88789/raw/media-88789-raw.mp3?");
+                background-size: contain;
+            }
+
+            .Gebaeudeschutzbutton {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/86717/raw/media-86717-raw.png?");
+                background-size: contain;
+            }
+            .GebaeudeschutzInhalt {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88787/raw/media-88787-raw.png?");
+                background-size: contain;
+            }
+            .GebaeudeschutzAudio {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88786/raw/media-88786-raw.mp3?");
+                background-size: contain;
+            }
+
+            .Zurückbutton {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/83125/raw/media-83125-raw.png?");
+                background-size: contain;
+            }
+
+            .Weiterbutton {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/83126/raw/media-83126-raw.png?");
+                background-size: contain;
+            }
+
+            .Wuppertal-Topografie-Info {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88783/raw/media-88783-raw.png?");
+                background-size: contain;
+            }
+            .Wuppertal-Topografie-Audio {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88784/raw/media-88784-raw.wav?");
+                background-size: contain;
+            }
+
+            .Schaubild-Topografische-Lage {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/84347/raw/media-84347-raw.png?");
+                background-size: contain;
+            }
+
+            .Ufernaehebutton {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/89502/raw/media-89502-raw.png?");
+                background-size: contain;
+            }    
+            .UfernaeheInhalt {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88790/raw/media-88790-raw.png?");
+                background-size: contain;
+            }    
+            .UfernaeheAudio {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/86759/raw/media-86759-raw.mp3?");
+                background-size: contain;
+            }  
+            .OEPNVInhalt {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88791/raw/media-88791-raw.png?");
+                background-size: contain;
+            }    
+            .OEPNVAudio {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/86758/raw/media-86758-raw.mp3?");
+                background-size: contain;
+            }           
+            
+            .LautsprecherdurchsageAudio {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/86756/raw/media-86756-raw.mp3?");
+                background-size: contain;
+            } 
+
+            .Infrastrukturbutton {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/89504/raw/media-89504-raw.png?");
+                background-size: contain;
+            } 
+            .InfrastrukturInhalt {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88799/raw/media-88799-raw.png?");
+                background-size: contain;
+            } 
+            .InfrastrukturAudio {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88800/raw/media-88800-raw.mp3?");
+                background-size: contain;
+            } 
+            .StrassenverkehrInhalt {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/89507/raw/media-89507-raw.png?");
+                background-size: contain;
+            } 
+            .StrassenverkehrAudio {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88797/raw/media-88797-raw.mp3?");
+                background-size: contain;
+            } 
+            .LEDInhalt {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88792/raw/media-88792-raw.png?");
+                background-size: contain;
+            } 
+            .LEDAudio {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88796/raw/media-88796-raw.mp3?");
+                background-size: contain;
+            } 
+
+
+            .Audiobutton {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/89503/raw/media-89503-raw.png?");
+                background-size: contain;
+            }             
+            
+            .Helfenbutton {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/89505/raw/media-89505-raw.png?");
+                background-size: contain;
+            }  
+            
+            .HelfenInhalt {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88803/raw/media-88803-raw.png?");
+                background-size: contain;
+            }  
+            .HelfenAudio {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88804/raw/media-88804-raw.mp3?");
+                background-size: contain;
+            }
+            
+            .StromkastenInhalt {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88802/raw/media-88802-raw.png?");
+                background-size: contain;
+            }  
+            .StromkastenAudio {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88801/raw/media-88801-raw.mp3?");
+                background-size: contain;
+            }
+
+            .AudioRTW{
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/86716/raw/media-86716-raw.wav?");
+                background-size: contain;
+            }
+
+            .Warnappsbutton {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/89495/raw/media-89495-raw.png?");
+                background-size: contain;
+            } 
+            .Uebersicht-Warnappsbutton {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/89494/raw/media-89494-raw.png?");
+                background-size: contain;
+            }
+            .Uebersicht-WarnappsInhalt {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88778/raw/media-88778-raw.png?");
+                background-size: contain;
+            }
+            .Uebersicht-WarnappsAudio {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88856/raw/media-88856-raw.wav?");
+                background-size: contain;
+            }
+
+            .Uebersicht-WarnappNINA {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88740/raw/media-88740-raw.png?");
+                background-size: contain;
+            }
+            .Uebersicht-WarnappNORA {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88738/raw/media-88738-raw.png?");
+                background-size: contain;
+            }
+
+
+            .Uebersicht-WarnappMobileHelfer{
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88739/raw/media-88739-raw.png?");
+                background-size: contain;
+            }
+            .Audio-WarnappNINA {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88794/raw/media-88794-raw.mp3?");
+                background-size: contain;
+            }
+            .Audio-WarnappNORA {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88793/raw/media-88793-raw.mp3?");
+                background-size: contain;
+            }
+
+
+            .Audio-WarnappMobileHelfer{
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88894/raw/media-88894-raw.mp3?");
+                background-size: contain;
+            }
+
+
+            .Hochwasserprojektbutton {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/89496/raw/media-89496-raw.png?");
+                background-size: contain;
+            }
+
+            .HochwasserprojektInhalt {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88780/raw/media-88780-raw.png?");
+                background-size: contain;
+            }
+
+            .HochwasserprojektAudio {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88896/raw/media-88896-raw.mp3?");
+                background-size: contain;
+            }
+
+            .Ablehnenbutton {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/87179/raw/media-87179-raw.png?");
+                background-size: contain;
+            }            
+            .Bestaetigenbutton {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/87178/raw/media-87178-raw.png?");
+                background-size: contain;
+            }            
+            .Nutzungsbedingungen {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/87180/raw/media-87180-raw.png?");
+                background-size: contain;
+            }            
+
+            .ImpressumSeite1 {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88659/raw/media-88659-raw.png?");
+                background-size: contain;
+            }    
+            .ImpressumSeite2 {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88660/raw/media-88660-raw.png?");
+                background-size: contain;
+            }    
+            .Impressumsbutton {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88454/raw/media-88454-raw.png?");
+                background-size: contain;
+            }    
+            .Impressumsbuttonweiter {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88661/raw/media-88661-raw.png?");
+                background-size: contain;
+            }    
+            .Impressumsbuttonzurueck {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88461/raw/media-88461-raw.png?");
+                background-size: contain;
+            }            
+            
+            .Foerderlogo {
+                width: 1px;
+                height: 1px;
+                background: url("https://cdn.mobfish.studio/wuphochwasser/media/88455/raw/media-88455-raw.png?");
+                background-size: contain;
+            }
+        </style>
+
+    </head>//Bleibt gleich
+
+    <body>//Bleibt gleich
+
+        <div id="panorama"></div>
+
+        <script>
+            var viewer = pannellum.viewer('panorama', {
+                "type": "equirectangular",
+                "autoLoad": true,
+                "default": {
+                    "firstScene": "start",
+                    "sceneFadeDuration": 1000
+                },
+
+                "scenes": {
+                    
+                // Hier werden alle Seiten eingefügt
+
+                "Intro Brillenpinguine": { //Titel der Scene
+                        "title": "Intro Brillenpinguine", // Titel der Seite
+                        "hfov": 110, // Bleibt gleich
+                        "pitch": 0, // (Oben / Unten) 0 = mittig | Startausrichtung
+                        "yaw": 360, // (Rechts / Links) 360 °= Gerade aus | Startausrichtung
+                        "type": "equirectangular",// Bleibt gleich
+                        "panorama": "https://cdn.mobfish.studio/zoowuppertal/media/92973/raw/media-92973-raw.png?", //Panorama Bild
+
+                        "hotSpots": [ //Anfang aller Hotspots
+
+                            // Für jeden neuen Hotspot werden 2 geschweifte Klammern gemacht:
+                            // {
+                            //              <---- Hier werden alle Parameter eingefügt             
+                            // }
+                            //
+
+                            {
+                                "pitch": 0, // (Oben / Unten) 0 = mittig
+                                "yaw": 90.0, // (Rechts / Links) 360 °= Gerade aus
+                                "type": "Scene", // Entweder Scene oder Info in die Gänsefüschen | Scene wird verwendet falls der Hotspot zu einer anderen Scene(Seite) führen soll. | Info wird bei einem normalen Bild verwendet.
+                                "text": "Der Brillenpinguin", // Titel für den Hotspot | Nichts spezifisches
+                                "sceneId": "",// Wird nur im Falle von "type": "scene" verwendet (Beispiel oben) ansonsten kann diese Zeile gelöscht werden | Titel der Scene (Z.66)
+                                "cssClass": "Der_Brillenpinguin", // Name der Css-Klasse siehe Z.40 (Style) | Muss genau gleich geschrieben werden (Großschreibung)
+                                "createTooltipFunc": hotspot, //Bleibt gleich
+                                "createTooltipArgs": "", //Bleibt gleich
+
+                            }, // Komma immer bei einem weiteren Hotspot
+
+                            {
+                                "pitch": 0, // (Oben / Unten) 0 = mittig
+                                "yaw": 90.0, // (Rechts / Links) 360 °= Gerade aus
+                                "type": "Scene", // Entweder Scene oder Info in die Gänsefüschen | Scene wird verwendet falls der Hotspot zu einer anderen Scene(Seite) führen soll. | Info wird bei einem normalen Bild verwendet.
+                                "text": "Ins Gehege", // Titel für den Hotspot | Nichts spezifisches
+                                "sceneId": "",// Wird nur im Falle von "type": "scene" verwendet (Beispiel oben) ansonsten kann diese Zeile gelöscht werden | Titel der Scene (Z.66)
+                                "cssClass": "Ins_Gehege", // Name der Css-Klasse siehe Z.40 (Style) | Muss genau gleich geschrieben werden (Großschreibung)
+                                "createTooltipFunc": hotspot, //Bleibt gleich
+                                "createTooltipArgs": "", //Bleibt gleich
+
+                            },
+
+                            {
+                                "pitch": 0, // (Oben / Unten) 0 = mittig
+                                "yaw": 90.0, // (Rechts / Links) 360 °= Gerade aus
+                                "type": "Scene", // Entweder Scene oder Info in die Gänsefüschen | Scene wird verwendet falls der Hotspot zu einer anderen Scene(Seite) führen soll. | Info wird bei einem normalen Bild verwendet.
+                                "text": "Hauptmenü", // Titel für den Hotspot | Nichts spezifisches
+                                "sceneId": "",// Wird nur im Falle von "type": "scene" verwendet (Beispiel oben) ansonsten kann diese Zeile gelöscht werden | Titel der Scene (Z.66)
+                                "cssClass": "Hauptmenue", // Name der Css-Klasse siehe Z.40 (Style) | Muss genau gleich geschrieben werden (Großschreibung)
+                                "createTooltipFunc": hotspot, //Bleibt gleich
+                                "createTooltipArgs": "", //Bleibt gleich
+
+                            },
+
+                            {
+                                "pitch": 0, // (Oben / Unten) 0 = mittig
+                                "yaw": 90.0, // (Rechts / Links) 360 °= Gerade aus
+                                "type": "Info", // Entweder Scene oder Info in die Gänsefüschen | Scene wird verwendet falls der Hotspot zu einer anderen Scene(Seite) führen soll. | Info wird bei einem normalen Bild verwendet.
+                                "text": "Pinguin", // Titel für den Hotspot | Nichts spezifisches
+                                "sceneId": "",// Wird nur im Falle von "type": "scene" verwendet (Beispiel oben) ansonsten kann diese Zeile gelöscht werden | Titel der Scene (Z.66)
+                                "cssClass": "Pinguin", // Name der Css-Klasse siehe Z.40 (Style) | Muss genau gleich geschrieben werden (Großschreibung)
+                                "createTooltipFunc": hotspot, //Bleibt gleich
+                                "createTooltipArgs": "", //Bleibt gleich
+
+                            },
+
+                            {
+                                "pitch": 0, // (Oben / Unten) 0 = mittig
+                                "yaw": 90.0, // (Rechts / Links) 360 °= Gerade aus
+                                "type": "Info", // Entweder Scene oder Info in die Gänsefüschen | Scene wird verwendet falls der Hotspot zu einer anderen Scene(Seite) führen soll. | Info wird bei einem normalen Bild verwendet.
+                                "text": "Begruessung Pinguine", // Titel für den Hotspot | Nichts spezifisches
+                                "sceneId": "",// Wird nur im Falle von "type": "scene" verwendet (Beispiel oben) ansonsten kann diese Zeile gelöscht werden | Titel der Scene (Z.66)
+                                "cssClass": "Begruessung_Pinguine", // Name der Css-Klasse siehe Z.40 (Style) | Muss genau gleich geschrieben werden (Großschreibung)
+                                "createTooltipFunc": hotspot, //Bleibt gleich
+                                "createTooltipArgs": "", //Bleibt gleich
+
+                            },
+
+
+                        ] // Ende aller Hotspots
+                },
+
+                "Einleitung Brillenpinguin": {
+                    "title": "Einleitung Brillenpinguin", // Titel der Seite
+                        "hfov": 110, // Bleibt gleich
+                        "pitch": 0, // (Oben / Unten) 0 = mittig | Startausrichtung
+                        "yaw": 360, // (Rechts / Links) 360 °= Gerade aus | Startausrichtung
+                        "type": "equirectangular",// Bleibt gleich
+                        "panorama": "https://cdn.mobfish.studio/zoowuppertal/media/82052/raw/media-82052-raw.mp4?", //Panorama Bild
+
+                        "hotSpots": [ //Anfang aller Hotspots
+
+        
+
+                        ] // Ende aller Hotspots
+
+                },
+
+                "scenes": {
+                    
+                    // Hier werden alle Seiten eingefügt
+    
+                    "Einleitung Brillenpinguine_Still": { //Titel der Scene
+                            "title": "Einleitung Brillenpinguine", // Titel der Seite
+                            "hfov": 110, // Bleibt gleich
+                            "pitch": 0, // (Oben / Unten) 0 = mittig | Startausrichtung
+                            "yaw": 360, // (Rechts / Links) 360 °= Gerade aus | Startausrichtung
+                            "type": "equirectangular",// Bleibt gleich
+                            "panorama": "https://cdn.mobfish.studio/zoowuppertal/media/92977/raw/media-92977-raw.png?", //Panorama Bild
+    
+                            "hotSpots": [ //Anfang aller Hotspots
+    
+                                // Für jeden neuen Hotspot werden 2 geschweifte Klammern gemacht:
+                                // {
+                                //              <---- Hier werden alle Parameter eingefügt             
+                                // }
+                                //
+    
+                                {
+                                    "pitch": 0, // (Oben / Unten) 0 = mittig
+                                    "yaw": 90.0, // (Rechts / Links) 360 °= Gerade aus
+                                    "type": "Scene", // Entweder Scene oder Info in die Gänsefüschen | Scene wird verwendet falls der Hotspot zu einer anderen Scene(Seite) führen soll. | Info wird bei einem normalen Bild verwendet.
+                                    "text": "Besonderheiten", // Titel für den Hotspot | Nichts spezifisches
+                                    "sceneId": "",// Wird nur im Falle von "type": "scene" verwendet (Beispiel oben) ansonsten kann diese Zeile gelöscht werden | Titel der Scene (Z.66)
+                                    "cssClass": "Infobutton", // Name der Css-Klasse siehe Z.40 (Style) | Muss genau gleich geschrieben werden (Großschreibung)
+                                    "createTooltipFunc": hotspot, //Bleibt gleich
+                                    "createTooltipArgs": "Besonderheiten", //Bleibt gleich
+    
+                                }, // Komma immer bei einem weiteren Hotspot
+
+                                {
+                                    "pitch": 0, // (Oben / Unten) 0 = mittig
+                                    "yaw": 90.0, // (Rechts / Links) 360 °= Gerade aus
+                                    "type": "Scene", // Entweder Scene oder Info in die Gänsefüschen | Scene wird verwendet falls der Hotspot zu einer anderen Scene(Seite) führen soll. | Info wird bei einem normalen Bild verwendet.
+                                    "text": "Hauptmenü", // Titel für den Hotspot | Nichts spezifisches
+                                    "sceneId": "",// Wird nur im Falle von "type": "scene" verwendet (Beispiel oben) ansonsten kann diese Zeile gelöscht werden | Titel der Scene (Z.66)
+                                    "cssClass": "Hauptmenue", // Name der Css-Klasse siehe Z.40 (Style) | Muss genau gleich geschrieben werden (Großschreibung)
+                                    "createTooltipFunc": hotspot, //Bleibt gleich
+                                    "createTooltipArgs": "Hauptmenü", //Bleibt gleich
+    
+                                },
+
+                                {
+                                    "pitch": 0, // (Oben / Unten) 0 = mittig
+                                    "yaw": 90.0, // (Rechts / Links) 360 °= Gerade aus
+                                    "type": "Scene", // Entweder Scene oder Info in die Gänsefüschen | Scene wird verwendet falls der Hotspot zu einer anderen Scene(Seite) führen soll. | Info wird bei einem normalen Bild verwendet.
+                                    "text": "Zurück", // Titel für den Hotspot | Nichts spezifisches
+                                    "sceneId": "",// Wird nur im Falle von "type": "scene" verwendet (Beispiel oben) ansonsten kann diese Zeile gelöscht werden | Titel der Scene (Z.66)
+                                    "cssClass": "Zurueck", // Name der Css-Klasse siehe Z.40 (Style) | Muss genau gleich geschrieben werden (Großschreibung)
+                                    "createTooltipFunc": hotspot, //Bleibt gleich
+                                    "createTooltipArgs": "Zurück", //Bleibt gleich
+    
+                                },
+    
+    
+                            ] // Ende aller Hotspots
+                    },
+
+                    "scenes": {
+                    
+                    // Hier werden alle Seiten eingefügt
+    
+                    "Brillenpinguine - Besonderheiten": { //Titel der Scene
+                            "title": "Besonderheiten Brillenpinguine", // Titel der Seite
+                            "hfov": 110, // Bleibt gleich
+                            "pitch": 0, // (Oben / Unten) 0 = mittig | Startausrichtung
+                            "yaw": 360, // (Rechts / Links) 360 °= Gerade aus | Startausrichtung
+                            "type": "equirectangular",// Bleibt gleich
+                            "panorama": "https://cdn.mobfish.studio/zoowuppertal/media/82165/raw/media-82165-raw.mp4?", //Panorama Bild
+    
+                  
+                    },
+
+                    "scenes": {
+                    
+                    // Hier werden alle Seiten eingefügt
+    
+                    "Brillenpinguine - Besonderheiten_Still": { //Titel der Scene
+                            "title": "Besonderheiten Brillenpinguine", // Titel der Seite
+                            "hfov": 110, // Bleibt gleich
+                            "pitch": 0, // (Oben / Unten) 0 = mittig | Startausrichtung
+                            "yaw": 360, // (Rechts / Links) 360 °= Gerade aus | Startausrichtung
+                            "type": "equirectangular",// Bleibt gleich
+                            "panorama": "https://cdn.mobfish.studio/zoowuppertal/media/92977/raw/media-92977-raw.png?", //Panorama Bild
+    
+                            "hotSpots": [ //Anfang aller Hotspots
+    
+                                // Für jeden neuen Hotspot werden 2 geschweifte Klammern gemacht:
+                                // {
+                                //              <---- Hier werden alle Parameter eingefügt             
+                                // }
+                                //
+    
+                                {
+                                    "pitch": 0, // (Oben / Unten) 0 = mittig
+                                    "yaw": 90.0, // (Rechts / Links) 360 °= Gerade aus
+                                    "type": "Scene", // Entweder Scene oder Info in die Gänsefüschen | Scene wird verwendet falls der Hotspot zu einer anderen Scene(Seite) führen soll. | Info wird bei einem normalen Bild verwendet.
+                                    "text": "Ab ins Gehege", // Titel für den Hotspot | Nichts spezifisches
+                                    "sceneId": "",// Wird nur im Falle von "type": "scene" verwendet (Beispiel oben) ansonsten kann diese Zeile gelöscht werden | Titel der Scene (Z.66)
+                                    "cssClass": "Der_Brillenpinguin", // Name der Css-Klasse siehe Z.40 (Style) | Muss genau gleich geschrieben werden (Großschreibung)
+                                    "createTooltipFunc": hotspot, //Bleibt gleich
+                                    "createTooltipArgs": "Ab ins Gehege", //Bleibt gleich
+    
+                                }, // Komma immer bei einem weiteren Hotspot
+
+                                {
+                                    "pitch": 0, // (Oben / Unten) 0 = mittig
+                                    "yaw": 90.0, // (Rechts / Links) 360 °= Gerade aus
+                                    "type": "Scene", // Entweder Scene oder Info in die Gänsefüschen | Scene wird verwendet falls der Hotspot zu einer anderen Scene(Seite) führen soll. | Info wird bei einem normalen Bild verwendet.
+                                    "text": "Hauptmenü", // Titel für den Hotspot | Nichts spezifisches
+                                    "sceneId": "",// Wird nur im Falle von "type": "scene" verwendet (Beispiel oben) ansonsten kann diese Zeile gelöscht werden | Titel der Scene (Z.66)
+                                    "cssClass": "Hauptmenue", // Name der Css-Klasse siehe Z.40 (Style) | Muss genau gleich geschrieben werden (Großschreibung)
+                                    "createTooltipFunc": hotspot, //Bleibt gleich
+                                    "createTooltipArgs": "Hauptmenü", //Bleibt gleich
+    
+                                },
+
+                                {
+                                    "pitch": 0, // (Oben / Unten) 0 = mittig
+                                    "yaw": 90.0, // (Rechts / Links) 360 °= Gerade aus
+                                    "type": "Scene", // Entweder Scene oder Info in die Gänsefüschen | Scene wird verwendet falls der Hotspot zu einer anderen Scene(Seite) führen soll. | Info wird bei einem normalen Bild verwendet.
+                                    "text": "Zurück", // Titel für den Hotspot | Nichts spezifisches
+                                    "sceneId": "",// Wird nur im Falle von "type": "scene" verwendet (Beispiel oben) ansonsten kann diese Zeile gelöscht werden | Titel der Scene (Z.66)
+                                    "cssClass": "Zurueck", // Name der Css-Klasse siehe Z.40 (Style) | Muss genau gleich geschrieben werden (Großschreibung)
+                                    "createTooltipFunc": hotspot, //Bleibt gleich
+                                    "createTooltipArgs": "Zurück", //Bleibt gleich
+    
+                                },
+    
+    
+                            ] // Ende aller Hotspots
+                    },
+
+                    "scenes": {
+                    
+                    // Hier werden alle Seiten eingefügt
+    
+                    "Fütterung Brillenpinguine_1": { //Titel der Scene
+                            "title": "Fütterung Brillenpinguine", // Titel der Seite
+                            "hfov": 110, // Bleibt gleich
+                            "pitch": 0, // (Oben / Unten) 0 = mittig | Startausrichtung
+                            "yaw": 360, // (Rechts / Links) 360 °= Gerade aus | Startausrichtung
+                            "type": "equirectangular",// Bleibt gleich
+                            "panorama": "https://cdn.mobfish.studio/zoowuppertal/media/80963/raw/media-80963-raw.mp4?", //Panorama Bild
+    
+    
+                    },
+
+                    "scenes": {
+                    
+                    // Hier werden alle Seiten eingefügt
+    
+                    "Fütterung Brillenpinguine_1_Still": { //Titel der Scene
+                            "title": "Fütterung Brillenpinguine", // Titel der Seite
+                            "hfov": 110, // Bleibt gleich
+                            "pitch": 0, // (Oben / Unten) 0 = mittig | Startausrichtung
+                            "yaw": 360, // (Rechts / Links) 360 °= Gerade aus | Startausrichtung
+                            "type": "equirectangular",// Bleibt gleich
+                            "panorama": "https://cdn.mobfish.studio/zoowuppertal/media/92975/raw/media-92975-raw.png?", //Panorama Bild
+    
+                            "hotSpots": [ //Anfang aller Hotspots
+    
+                                // Für jeden neuen Hotspot werden 2 geschweifte Klammern gemacht:
+                                // {
+                                //              <---- Hier werden alle Parameter eingefügt             
+                                // }
+                                //
+    
+                        
+
+                                {
+                                    "pitch": 0, // (Oben / Unten) 0 = mittig
+                                    "yaw": 90.0, // (Rechts / Links) 360 °= Gerade aus
+                                    "type": "Scene", // Entweder Scene oder Info in die Gänsefüschen | Scene wird verwendet falls der Hotspot zu einer anderen Scene(Seite) führen soll. | Info wird bei einem normalen Bild verwendet.
+                                    "text": "Hauptmenü", // Titel für den Hotspot | Nichts spezifisches
+                                    "sceneId": "",// Wird nur im Falle von "type": "scene" verwendet (Beispiel oben) ansonsten kann diese Zeile gelöscht werden | Titel der Scene (Z.66)
+                                    "cssClass": "Hauptmenue", // Name der Css-Klasse siehe Z.40 (Style) | Muss genau gleich geschrieben werden (Großschreibung)
+                                    "createTooltipFunc": hotspot, //Bleibt gleich
+                                    "createTooltipArgs": "Hauptmenü", //Bleibt gleich
+    
+                                },
+
+                                {
+                                    "pitch": 0, // (Oben / Unten) 0 = mittig
+                                    "yaw": 90.0, // (Rechts / Links) 360 °= Gerade aus
+                                    "type": "Scene", // Entweder Scene oder Info in die Gänsefüschen | Scene wird verwendet falls der Hotspot zu einer anderen Scene(Seite) führen soll. | Info wird bei einem normalen Bild verwendet.
+                                    "text": "Zurück", // Titel für den Hotspot | Nichts spezifisches
+                                    "sceneId": "",// Wird nur im Falle von "type": "scene" verwendet (Beispiel oben) ansonsten kann diese Zeile gelöscht werden | Titel der Scene (Z.66)
+                                    "cssClass": "Zurueck", // Name der Css-Klasse siehe Z.40 (Style) | Muss genau gleich geschrieben werden (Großschreibung)
+                                    "createTooltipFunc": hotspot, //Bleibt gleich
+                                    "createTooltipArgs": "Zurück", //Bleibt gleich
+    
+                                },
+    
+    
+                            ] // Ende aller Hotspots
+                    },
+
+                    "scenes": {
+                    
+                    // Hier werden alle Seiten eingefügt
+    
+                    "Fütterung Brillenpinguine_2": { //Titel der Scene
+                            "title": "Fütterung Brillenpinguine", // Titel der Seite
+                            "hfov": 110, // Bleibt gleich
+                            "pitch": 0, // (Oben / Unten) 0 = mittig | Startausrichtung
+                            "yaw": 360, // (Rechts / Links) 360 °= Gerade aus | Startausrichtung
+                            "type": "equirectangular",// Bleibt gleich
+                            "panorama": "https://cdn.mobfish.studio/zoowuppertal/media/80964/raw/media-80964-raw.mp4?", //Panorama Bild
+    
+    
+                    },
+
+                    "scenes": {
+                    
+                    // Hier werden alle Seiten eingefügt
+    
+                    "Fütterung Brillenpinguine_2_Still": { //Titel der Scene
+                            "title": "Fütterung Brillenpinguine", // Titel der Seite
+                            "hfov": 110, // Bleibt gleich
+                            "pitch": 0, // (Oben / Unten) 0 = mittig | Startausrichtung
+                            "yaw": 360, // (Rechts / Links) 360 °= Gerade aus | Startausrichtung
+                            "type": "equirectangular",// Bleibt gleich
+                            "panorama": "https://cdn.mobfish.studio/zoowuppertal/media/92965/raw/media-92965-raw.png?", //Panorama Bild
+    
+                            "hotSpots": [ //Anfang aller Hotspots
+    
+                                // Für jeden neuen Hotspot werden 2 geschweifte Klammern gemacht:
+                                // {
+                                //              <---- Hier werden alle Parameter eingefügt             
+                                // }
+                                //
+    
+                        
+
+                                {
+                                    "pitch": 0, // (Oben / Unten) 0 = mittig
+                                    "yaw": 90.0, // (Rechts / Links) 360 °= Gerade aus
+                                    "type": "Scene", // Entweder Scene oder Info in die Gänsefüschen | Scene wird verwendet falls der Hotspot zu einer anderen Scene(Seite) führen soll. | Info wird bei einem normalen Bild verwendet.
+                                    "text": "Hauptmenü", // Titel für den Hotspot | Nichts spezifisches
+                                    "sceneId": "",// Wird nur im Falle von "type": "scene" verwendet (Beispiel oben) ansonsten kann diese Zeile gelöscht werden | Titel der Scene (Z.66)
+                                    "cssClass": "Hauptmenue", // Name der Css-Klasse siehe Z.40 (Style) | Muss genau gleich geschrieben werden (Großschreibung)
+                                    "createTooltipFunc": hotspot, //Bleibt gleich
+                                    "createTooltipArgs": "Hauptmenü", //Bleibt gleich
+    
+                                },
+
+                                {
+                                    "pitch": 0, // (Oben / Unten) 0 = mittig
+                                    "yaw": 90.0, // (Rechts / Links) 360 °= Gerade aus
+                                    "type": "Scene", // Entweder Scene oder Info in die Gänsefüschen | Scene wird verwendet falls der Hotspot zu einer anderen Scene(Seite) führen soll. | Info wird bei einem normalen Bild verwendet.
+                                    "text": "Zurück", // Titel für den Hotspot | Nichts spezifisches
+                                    "sceneId": "",// Wird nur im Falle von "type": "scene" verwendet (Beispiel oben) ansonsten kann diese Zeile gelöscht werden | Titel der Scene (Z.66)
+                                    "cssClass": "Zurueck", // Name der Css-Klasse siehe Z.40 (Style) | Muss genau gleich geschrieben werden (Großschreibung)
+                                    "createTooltipFunc": hotspot, //Bleibt gleich
+                                    "createTooltipArgs": "Zurück", //Bleibt gleich
+    
+                                },
+    
+    
+                            ] // Ende aller Hotspots
+                    },
+
+                   
+                    "scenes": {
+                    
+                    // Hier werden alle Seiten eingefügt
+    
+                    "Gehege Brillenpinguine_Still": { //Titel der Scene
+                            "title": "Gehege Brillenpinguine", // Titel der Seite
+                            "hfov": 110, // Bleibt gleich
+                            "pitch": 0, // (Oben / Unten) 0 = mittig | Startausrichtung
+                            "yaw": 360, // (Rechts / Links) 360 °= Gerade aus | Startausrichtung
+                            "type": "equirectangular",// Bleibt gleich
+                            "panorama": "https://cdn.mobfish.studio/zoowuppertal/media/92994/raw/media-92994-raw.png?", //Panorama Bild
+    
+                            "hotSpots": [ //Anfang aller Hotspots
+    
+                                // Für jeden neuen Hotspot werden 2 geschweifte Klammern gemacht:
+                                // {
+                                //              <---- Hier werden alle Parameter eingefügt             
+                                // }
+                                //
+    
+                        
+
+                                {
+                                    "pitch": 0, // (Oben / Unten) 0 = mittig
+                                    "yaw": 90.0, // (Rechts / Links) 360 °= Gerade aus
+                                    "type": "Scene", // Entweder Scene oder Info in die Gänsefüschen | Scene wird verwendet falls der Hotspot zu einer anderen Scene(Seite) führen soll. | Info wird bei einem normalen Bild verwendet.
+                                    "text": "Hauptmenü", // Titel für den Hotspot | Nichts spezifisches
+                                    "sceneId": "",// Wird nur im Falle von "type": "scene" verwendet (Beispiel oben) ansonsten kann diese Zeile gelöscht werden | Titel der Scene (Z.66)
+                                    "cssClass": "Hauptmenue", // Name der Css-Klasse siehe Z.40 (Style) | Muss genau gleich geschrieben werden (Großschreibung)
+                                    "createTooltipFunc": hotspot, //Bleibt gleich
+                                    "createTooltipArgs": "Hauptmenü", //Bleibt gleich
+    
+                                },
+
+                                {
+                                    "pitch": 0, // (Oben / Unten) 0 = mittig
+                                    "yaw": 90.0, // (Rechts / Links) 360 °= Gerade aus
+                                    "type": "Scene", // Entweder Scene oder Info in die Gänsefüschen | Scene wird verwendet falls der Hotspot zu einer anderen Scene(Seite) führen soll. | Info wird bei einem normalen Bild verwendet.
+                                    "text": "Zurück", // Titel für den Hotspot | Nichts spezifisches
+                                    "sceneId": "",// Wird nur im Falle von "type": "scene" verwendet (Beispiel oben) ansonsten kann diese Zeile gelöscht werden | Titel der Scene (Z.66)
+                                    "cssClass": "Zurueck", // Name der Css-Klasse siehe Z.40 (Style) | Muss genau gleich geschrieben werden (Großschreibung)
+                                    "createTooltipFunc": hotspot, //Bleibt gleich
+                                    "createTooltipArgs": "Zurück", //Bleibt gleich
+    
+                                },
+
+                                {
+                                    "pitch": 0, // (Oben / Unten) 0 = mittig
+                                    "yaw": 90.0, // (Rechts / Links) 360 °= Gerade aus
+                                    "type": "Scene", // Entweder Scene oder Info in die Gänsefüschen | Scene wird verwendet falls der Hotspot zu einer anderen Scene(Seite) führen soll. | Info wird bei einem normalen Bild verwendet.
+                                    "text": "Weiter zur Fütterung", // Titel für den Hotspot | Nichts spezifisches
+                                    "sceneId": "",// Wird nur im Falle von "type": "scene" verwendet (Beispiel oben) ansonsten kann diese Zeile gelöscht werden | Titel der Scene (Z.66)
+                                    "cssClass": "Vorwaerts", // Name der Css-Klasse siehe Z.40 (Style) | Muss genau gleich geschrieben werden (Großschreibung)
+                                    "createTooltipFunc": hotspot, //Bleibt gleich
+                                    "createTooltipArgs": "Weiter zur Fütterung", //Bleibt gleich
+    
+                                },
+
+                                {
+                                    "pitch": 0, // (Oben / Unten) 0 = mittig
+                                    "yaw": 90.0, // (Rechts / Links) 360 °= Gerade aus
+                                    "type": "Info", // Entweder Scene oder Info in die Gänsefüschen | Scene wird verwendet falls der Hotspot zu einer anderen Scene(Seite) führen soll. | Info wird bei einem normalen Bild verwendet.
+                                    "text": "Speaker-Zoo-29", // Titel für den Hotspot | Nichts spezifisches
+                                    "sceneId": "",// Wird nur im Falle von "type": "scene" verwendet (Beispiel oben) ansonsten kann diese Zeile gelöscht werden | Titel der Scene (Z.66)
+                                    "cssClass": "Audio", // Name der Css-Klasse siehe Z.40 (Style) | Muss genau gleich geschrieben werden (Großschreibung)
+                                    "createTooltipFunc": hotspot, //Bleibt gleich
+                                    "createTooltipArgs": "", //Bleibt gleich
+    
+                                },
+
+                                {
+                                    "pitch": 0, // (Oben / Unten) 0 = mittig
+                                    "yaw": 90.0, // (Rechts / Links) 360 °= Gerade aus
+                                    "type": "Info", // Entweder Scene oder Info in die Gänsefüschen | Scene wird verwendet falls der Hotspot zu einer anderen Scene(Seite) führen soll. | Info wird bei einem normalen Bild verwendet.
+                                    "text": "Fun Fact", // Titel für den Hotspot | Nichts spezifisches
+                                    "sceneId": "",// Wird nur im Falle von "type": "scene" verwendet (Beispiel oben) ansonsten kann diese Zeile gelöscht werden | Titel der Scene (Z.66)
+                                    "cssClass": "Infobutton", // Name der Css-Klasse siehe Z.40 (Style) | Muss genau gleich geschrieben werden (Großschreibung)
+                                    "createTooltipFunc": hotspot, //Bleibt gleich
+                                    "createTooltipArgs": "Fun Fact", //Bleibt gleich
+    
+                                },
+
+                                {
+                                    "pitch": 0, // (Oben / Unten) 0 = mittig
+                                    "yaw": 90.0, // (Rechts / Links) 360 °= Gerade aus
+                                    "type": "Info", // Entweder Scene oder Info in die Gänsefüschen | Scene wird verwendet falls der Hotspot zu einer anderen Scene(Seite) führen soll. | Info wird bei einem normalen Bild verwendet.
+                                    "text": "Steckbrief", // Titel für den Hotspot | Nichts spezifisches
+                                    "sceneId": "",// Wird nur im Falle von "type": "scene" verwendet (Beispiel oben) ansonsten kann diese Zeile gelöscht werden | Titel der Scene (Z.66)
+                                    "cssClass": "Steckbrief", // Name der Css-Klasse siehe Z.40 (Style) | Muss genau gleich geschrieben werden (Großschreibung)
+                                    "createTooltipFunc": hotspot, //Bleibt gleich
+                                    "createTooltipArgs": "Steckbrief", //Bleibt gleich
+    
+                                },
+    
+    
+                            ] // Ende aller Hotspots
+                    },
+    
+
+            }
+            });
+
+        </script>
+
+    </body>//Bleibt gleich
+
+</html>//Bleibt gleich
